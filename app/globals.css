@@ -1,0 +1,23 @@
+/* Global CSS file. Tailwind loaded via CDN in layout. */
+/* Плавности по всему приложению */
+* {
+  transition: color .15s ease, background-color .15s ease,
+              border-color .15s ease, box-shadow .15s ease, transform .12s ease;
+}
+
+/* Фокус-кольцо для доступности */
+.btn:focus-visible, .input:focus-visible, a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79,70,229,.25);
+  border-color: rgba(79,70,229,.4);
+}
+
+/* Вспомогательные утилиты (esli Tailwind net klassov) */
+.btn       { @apply px-4 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-50; }
+.btn-ghost { @apply btn bg-transparent border-transparent hover:bg-gray-100; }
+.btn-brand { @apply btn text-white bg-indigo-600 border-indigo-600 hover:bg-indigo-700; }
+.btn-accent{ @apply btn text-white bg-teal-500   border-teal-500   hover:bg-teal-600; }
+.input     { @apply w-full px-3 py-2 border rounded-xl; }
+.card      { @apply rounded-2xl border border-gray-200 bg-white shadow-sm; }
+.chip      { @apply px-3 py-1 rounded-full bg-white border border-gray-200; }
+.container { @apply max-w-5xl mx-auto px-4; }
